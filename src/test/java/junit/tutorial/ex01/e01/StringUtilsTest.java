@@ -28,10 +28,7 @@ class StringUtilsTest {
 	void tearDown() throws Exception {
 	}
 
-	@Test
-	void testToSnakeCase() {
-		fail("まだ実装されていません");
-	}
+
 	
 	@Test
 	@DisplayName("「aaa」を入力 ->「aaa」が取得できる")

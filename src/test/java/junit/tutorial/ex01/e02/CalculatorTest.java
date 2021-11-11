@@ -28,10 +28,7 @@ class CalculatorTest {
 	void tearDown() throws Exception {
 	}
 
-	@Test
-	void testDivide() {
-		fail("まだ実装されていません");
-	}
+
 	
 	@Test
 	@DisplayName( "第２引数に０を指定＆divideを呼び出す -> IllegalArgumentException発生")

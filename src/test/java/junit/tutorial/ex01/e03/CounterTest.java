@@ -29,15 +29,6 @@ class CounterTest {
 	void tearDown() throws Exception {
 	}
 
-	@Test
-	void testCounter() {
-		fail("まだ実装されていません");
-	}
-
-	@Test
-	void testIncrement() {
-		fail("まだ実装されていません");
-	}
 	
 	@Test
 	@DisplayName("初期状態で、incrementメソッドを実行 -> １が取得できる")

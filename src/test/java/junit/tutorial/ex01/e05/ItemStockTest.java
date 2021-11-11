@@ -28,22 +28,12 @@ class ItemStockTest {
 	@AfterEach
 	void tearDown() throws Exception {
 	}
-
-	@Test
-	void testGetNum() {
-		fail("まだ実装されていません");
-	}
-
-	@Test
-	void testAdd() {
-		fail("まだ実装されていません");
-	}
 	
 	@Test
 	@DisplayName("初期状態で、getNum -> ０が取得できる")
 	void test1() {
 		ItemStock itemStock = new ItemStock();
-		Item item = new Item("",0);
+		Item item = new Item("syoki",0);
 		assertEquals(0, itemStock.getNum(item));
 	}
 	
@@ -51,7 +41,7 @@ class ItemStockTest {
 	@DisplayName("初期状態で、addでItemを追加 -> 1が取得できる")
 	void test2() {
 		ItemStock itemStock = new ItemStock();
-		Item item = new Item("",0);
+		Item item = new Item("syoki",0);
 		itemStock.add(item);
 		assertEquals(1, itemStock.getNum(item));
 	}
