@@ -38,23 +38,23 @@ class StringUtilsTest {
 	
 	@Test
 	@DisplayName("「aaa」を入力 ->「aaa」が取得できる")
-	void test2ToSnakeCase() {
+	void test1() {
 		String result = "aaa";
-		assertEquals(result, stringUtils.toSnakeCase(result));
+		assertEquals("aaa", stringUtils.toSnakeCase(result));
 	}
 
 	@Test
 	@DisplayName("「HelloWorld」を入力 ->「hello_world」が取得できる")
-	void test3ToSnakeCase() {
+	void test2() {
 		String result = "HelloWorld";
-		assertEquals(result, stringUtils.toSnakeCase(result));
+		assertEquals("hello_world", stringUtils.toSnakeCase(result));
 	}
 	
 	@Test
 	@DisplayName("「practiceJunit」を入力 ->「practice_junit」が取得できる")
-	void test4ToSnakeCase() {
+	void test3() {
 		String result = "practiceJunit";
-		assertEquals(result, stringUtils.toSnakeCase(result));
+		assertEquals("practice_junit", stringUtils.toSnakeCase(result));
 	}
 	
 
