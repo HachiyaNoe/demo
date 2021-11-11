@@ -1,4 +1,4 @@
-package junit.tutorial.ex01.e02;
+package junit.tutorial.ex01.e04;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -8,9 +8,10 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 
-class CalculatorTest {
+import junit.tutorial.ex01.e01.StringUtils;
+
+class NumberUtilsTest {
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
@@ -29,21 +30,20 @@ class CalculatorTest {
 	}
 
 	@Test
-	void testDivide() {
+	void testIsEven() {
 		fail("まだ実装されていません");
 	}
 	
 	@Test
-	@DisplayName( "第２引数に０を指定＆divideを呼び出す -> IllegalArgumentException発生")
+	@DisplayName("入力値「１０」 -> trueを返す")
 	void test1() {
-		try {
-			Calculator calculator = new Calculator();
-		    calculator.divide(1, 0);
-			fail("IllegalArgumentException例外が発生しませんでした");
-			
-		} catch (IllegalArgumentException e) {
-			assertEquals("divide by zero.",e.getMessage(), "例外のメッセージが異なります");
-		}
-		
+		assertTrue( NumberUtils.isEven(10) );
 	}
+	
+	@Test
+	@DisplayName("入力値「7」 -> falseを返す")
+	void test2() {
+		assertFalse( NumberUtils.isEven(7) );
+	}
+	
 }
