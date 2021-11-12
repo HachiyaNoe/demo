@@ -58,15 +58,11 @@ class LogLoaderTest {
 	void test3() throws IOException {
 	
 
-		
-		
 		try {
 			
-			
-			doThrow(new IOException("IOExceptionが発生しました")).when(logLoader).load(eq(file)); //モック化したメソッドで例外を発生させる
-			
-			
-			
+			//モック化したメソッドで例外を発生させる
+			doThrow(new IOException("IOExceptionが発生しました")).when(logLoader).load(eq(file)); 
+
 			logAnalyzer.analyze(file);
 			
 			fail("AnalyzeExeption例外が発生しませんでした");
