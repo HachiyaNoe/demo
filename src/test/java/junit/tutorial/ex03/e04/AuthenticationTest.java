@@ -67,6 +67,7 @@ class AuthenticationTest {
 		void test2()  {
 		 doReturn(new Account("","pass"))
 		  .when(dao).findOrNull("");
+		 
 		 assertTrue(authentication.authenticate("", "pass") instanceof Account);
 
 		}
@@ -78,6 +79,7 @@ class AuthenticationTest {
 		void test3()  {
 		 doReturn(new Account("","pass"))
 		  .when(dao).findOrNull("");
+		 
 		 assertNull(authentication.authenticate("", ""));
 
 		}
