@@ -6,6 +6,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.jupiter.api.AfterAll;
@@ -37,20 +38,21 @@ class EmployeeTest {
 	@DisplayName("テキストファイルを指定してメソッドを実行 ->"
 			+ " 名前、名字、メールアドレスが反映されたEmployeeオブジェクトのリストを取得できる")
 	void test1() {
-		InputStream fileStream;
-		try {
-			fileStream = new FileInputStream("Employee.txt");
-			List<Employee> list = Employee.load(fileStream);
 		
-		Employee employee = new Employee();
+
+		InputStream fileStream = getClass().getResourceAsStream("Employee.txt");
+			List<Employee> emp = Employee.load(fileStream);
+			
+			
+			
+
+			
+
+			assertEquals("Ichiro", String.valueOf(emp.get(0).getFirstName()) );
+			assertEquals("Tanaka", String.valueOf(emp.get(0).getLastName()) );
+			assertEquals("ichiro@example.com", String.valueOf(emp.get(0).getEmail()) );
+			
 		
-			assertEquals(employee.getFirstName(),list.get(1) );
-			assertEquals(employee.getLastName(),list.get(2) );
-			assertEquals(employee.getEmail(),list.get(3) );
-			
-		} catch (IOException e) {
-			
-		}
 		
 	}
 
